@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Movies>
+  <Movie>
+    <Id>0</Id>
+    <Title>string</Title>
+    <Category>string</Category>
+    <ImgUrl>string</ImgUrl>
+    <Rating>0</Rating>
+  </Movie>
+  <Movie>
+    <Id>0</Id>
+    <Title>string</Title>
+    <Category>string</Category>
+    <ImgUrl>string</ImgUrl>
+    <Rating>0</Rating>
+  </Movie>
+</Movies>
