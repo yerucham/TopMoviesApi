@@ -38,11 +38,13 @@ namespace eWave.TopMovies.eWave.TopMovies.DAL
             return movies;
         }
 
-        internal static XElement GetMovie(int id)
+        internal static Movie GetMovie(int id)
         {
+            XmlSerializer serializer = new XmlSerializer(typeof(Movie));
             var xDoc = XDocument.Load("Movies.xml");
             var movieElemant = xDoc.Root.Descendants("Movie").FirstOrDefault(x => x.Element("Id").Value == id.ToString());
-            return movieElemant;
+            Movie _movie= (Movie)serializer.Deserialize(movieElemant.CreateReader());
+            return _movie;
         }
 
         public static void CreateXml(Movie movie)

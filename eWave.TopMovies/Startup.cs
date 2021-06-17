@@ -27,8 +27,14 @@ namespace eWave.TopMovies
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+           
             services.AddScoped<iMovieRepository, MovieRepository>();
             services.AddControllers();
+            services.AddCors(options =>
+            {
+                options.AddDefaultPolicy(
+                    builder => builder.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
+            });
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "eWave.TopMovies", Version = "v1" });
@@ -49,12 +55,15 @@ namespace eWave.TopMovies
 
             app.UseRouting();
 
+            app.UseCors();
+
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
             });
+        
         }
     }
 }

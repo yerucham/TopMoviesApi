@@ -1,5 +1,6 @@
 ﻿using eWave.TopMovies.Models;
 using eWave.TopMovies.Repositories;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -11,8 +12,10 @@ using System.Xml.Linq;
 
 namespace eWave.TopMovies.Controllers
 {
+
+   
     [Route("api/[controller]")]
-    [ApiController]
+    [ApiController]  
     public class MoviesController : ControllerBase
     {
         private iMovieRepository _movieRepository;
@@ -29,7 +32,7 @@ namespace eWave.TopMovies.Controllers
         }
 
         [HttpGet("{id}")]
-        public XElement GetMovies(int id)
+        public Movie GetMovie(int id)
         {
             return  _movieRepository.Get(id);
         }

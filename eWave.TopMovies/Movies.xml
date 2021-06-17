@@ -1,17 +1,38 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Movies>
   <Movie>
-    <Id>0</Id>
+    <Id>2</Id>
     <Title>string</Title>
     <Category>string</Category>
     <ImgUrl>string</ImgUrl>
     <Rating>0</Rating>
   </Movie>
   <Movie>
-    <Id>0</Id>
+    <Id>1</Id>
     <Title>string</Title>
     <Category>string</Category>
     <ImgUrl>string</ImgUrl>
     <Rating>0</Rating>
+  </Movie>
+  <Movie>
+    <Id>7</Id>
+    <Title>string</Title>
+    <Category>string</Category>
+    <ImgUrl>ht</ImgUrl>
+    <Rating>0</Rating>
+  </Movie>
+  <Movie>
+    <Id>73</Id>
+    <Title>lgffol</Title>
+    <Category>string</Category>
+    <ImgUrl>string</ImgUrl>
+    <Rating>0</Rating>
+  </Movie>
+  <Movie>
+    <Id>0</Id>
+    <Title>dfgs</Title>
+    <Category>dgs</Category>
+    <ImgUrl>dg</ImgUrl>
+    <Rating>12</Rating>
   </Movie>
 </Movies>

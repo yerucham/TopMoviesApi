@@ -11,7 +11,7 @@ namespace eWave.TopMovies.Repositories
     public interface iMovieRepository
     {
         List<Movie> Get();
-        XElement Get(int id);
+        Movie Get(int id);
         List<Movie> Create(Movie movie);
         void Update(int id,Movie movie);
         void Delete(int id);

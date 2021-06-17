@@ -27,7 +27,7 @@ namespace eWave.TopMovies.Repositories
             return MoviesXmlContext.GetMovies();
         }
 
-        public XElement Get(int id)
+        public Movie Get(int id)
         {
            return MoviesXmlContext.GetMovie(id);
         }
