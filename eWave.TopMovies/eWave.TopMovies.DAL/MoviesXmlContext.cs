@@ -70,10 +70,11 @@ namespace eWave.TopMovies.eWave.TopMovies.DAL
 
         public static void AddMovieElement(Movie movie)
         {
+            Random rnd = new Random();
             XDocument doc_ = XDocument.Load(("Movies.xml"));
             XElement school = doc_.Element("Movies");
             school.Add(new XElement("Movie",
-                  new XElement("Id", movie.Id),
+                  new XElement("Id",  rnd.Next(0,int.MaxValue)  ),
                        new XElement("Title", movie.Title),
                          new XElement("Category", movie.Category),
                            new XElement("ImgUrl", movie.ImgUrl),

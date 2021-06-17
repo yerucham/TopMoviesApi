@@ -35,4 +35,11 @@
     <ImgUrl>dg</ImgUrl>
     <Rating>12</Rating>
   </Movie>
+  <Movie>
+    <Id>684536548</Id>
+    <Title>מהיר ועצבני</Title>
+    <Category>string</Category>
+    <ImgUrl>string</ImgUrl>
+    <Rating>0</Rating>
+  </Movie>
 </Movies>
