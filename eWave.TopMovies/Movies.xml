@@ -1,45 +1,66 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Movies>
   <Movie>
-    <Id>2</Id>
-    <Title>string</Title>
-    <Category>string</Category>
-    <ImgUrl>string</ImgUrl>
-    <Rating>0</Rating>
+    <Id>476201825</Id>
+    <Title>TIN DRUM2</Title>
+    <Category>קומדיה</Category>
+    <ImgUrl>https://image.tmdb.org/t/p/w185//b4zV75WQL68XcKRYdliCmTk5Jwc.jpg</ImgUrl>
+    <Rating>34</Rating>
   </Movie>
   <Movie>
-    <Id>1</Id>
-    <Title>string</Title>
-    <Category>string</Category>
-    <ImgUrl>string</ImgUrl>
-    <Rating>0</Rating>
+    <Id>838620417</Id>
+    <Title>007</Title>
+    <Category>מדע בדיוני</Category>
+    <ImgUrl>https://image.tmdb.org/t/p/w185//HORpg5CSkmeQlAolx3bKMrKgfi.jpg</ImgUrl>
+    <Rating>45</Rating>
   </Movie>
   <Movie>
-    <Id>7</Id>
-    <Title>string</Title>
-    <Category>string</Category>
-    <ImgUrl>ht</ImgUrl>
-    <Rating>0</Rating>
+    <Id>560072043</Id>
+    <Title>THE TRAVELLING PLAYERS </Title>
+    <Category>דרמה </Category>
+    <ImgUrl>https://image.tmdb.org/t/p/w185/ksXtJOPANfI5hWOR40oxJ07lD8x.jpg</ImgUrl>
+    <Rating>222</Rating>
   </Movie>
   <Movie>
-    <Id>73</Id>
-    <Title>lgffol</Title>
-    <Category>string</Category>
-    <ImgUrl>string</ImgUrl>
-    <Rating>0</Rating>
+    <Id>770877912</Id>
+    <Title>WHEN HARRY MET SALLY</Title>
+    <Category>פנטזיה</Category>
+    <ImgUrl>https://image.tmdb.org/t/p/w185/3wkbKeowUp1Zpkw1KkBqMWbt0P9.jpg</ImgUrl>
+    <Rating>23</Rating>
   </Movie>
   <Movie>
-    <Id>0</Id>
-    <Title>dfgs</Title>
-    <Category>dgs</Category>
-    <ImgUrl>dg</ImgUrl>
-    <Rating>12</Rating>
+    <Id>289238149</Id>
+    <Title>NANOOK</Title>
+    <Category>קומדיה</Category>
+    <ImgUrl>https://image.tmdb.org/t/p/w185/9WAboi1QbKu41WkyGxQVNpXwwxx.jpg</ImgUrl>
+    <Rating>34</Rating>
   </Movie>
   <Movie>
-    <Id>684536548</Id>
-    <Title>מהיר ועצבני</Title>
-    <Category>string</Category>
-    <ImgUrl>string</ImgUrl>
-    <Rating>0</Rating>
+    <Id>759174286</Id>
+    <Title>בית הקלפים</Title>
+    <Category>דרמה</Category>
+    <ImgUrl>https://image.tmdb.org/t/p/w185/riLA3cq2R8m6Rx1z6OpdE8PH8H9.jpg</ImgUrl>
+    <Rating>231</Rating>
+  </Movie>
+  <Movie>
+    <Id>1982404106</Id>
+    <Title>שומר ראש 11 </Title>
+    <Category>דרמה </Category>
+    <ImgUrl>https://image.tmdb.org/t/p/w185/xBa4d8ra9XWFg4EM6kUPnV1WWC7.jpg</ImgUrl>
+    <Rating>21</Rating>
+  </Movie>
+  <Movie>
+    <Id>1303649492</Id>
+    <Title>USUAL</Title>
+    <Category>קומדיה שחורה</Category>
+    <ImgUrl>https://image.tmdb.org/t/p/w185/bUPmtQzrRhzqYySeiMpv7GurAfm.jpg</ImgUrl>
+    <Rating>33</Rating>
+  </Movie>
+  <Movie>
+    <Id>1296619207</Id>
+    <Title>בית הנייר</Title>
+    <Category>דרמה</Category>
+    <ImgUrl>https://image.tmdb.org/t/p/w185/pB8BM7pdSp6B6Ih7QZ4DrQ3PmJK.jpg</ImgUrl>
+    <Rating>226</Rating>
   </Movie>
 </Movies>

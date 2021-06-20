@@ -1,4 +1,5 @@
-﻿using eWave.TopMovies.Models;
+﻿using eWave.TopMovies.eWave.TopMovies.BL;
+using eWave.TopMovies.Models;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -21,21 +22,25 @@ namespace eWave.TopMovies.eWave.TopMovies.DAL
             }
             else
             {
+                CheckIfGreaterThanTen();
                 AddMovieElement(movie);
             }
             return GetMovies();
         }
 
+        private static void CheckIfGreaterThanTen()
+        {
+            var movieList = DeserializeMoviesXml();
+            if (movieList.Count >= 10)
+            {
+                int movieIdToDelete = Movies_BL.GetMovieMinRating(movieList);
+                DeleteMovieElament(movieIdToDelete);
+            }
+        }
+
         public static List<Movie> GetMovies()
         {
-            XmlSerializer serializer = new XmlSerializer(typeof(Movies));
-            List<Movie> movies = new List<Movie>();
-            using (FileStream fileStream = new FileStream("Movies.xml", FileMode.Open))
-            {
-                Movies _moviesXml = (Movies)serializer.Deserialize(fileStream);
-                movies = _moviesXml.moviesItems;
-            }
-            return movies;
+            return DeserializeMoviesXml();
         }
 
         internal static Movie GetMovie(int id)
@@ -43,7 +48,7 @@ namespace eWave.TopMovies.eWave.TopMovies.DAL
             XmlSerializer serializer = new XmlSerializer(typeof(Movie));
             var xDoc = XDocument.Load("Movies.xml");
             var movieElemant = xDoc.Root.Descendants("Movie").FirstOrDefault(x => x.Element("Id").Value == id.ToString());
-            Movie _movie= (Movie)serializer.Deserialize(movieElemant.CreateReader());
+            Movie _movie = (Movie)serializer.Deserialize(movieElemant.CreateReader());
             return _movie;
         }
 
@@ -74,7 +79,7 @@ namespace eWave.TopMovies.eWave.TopMovies.DAL
             XDocument doc_ = XDocument.Load(("Movies.xml"));
             XElement school = doc_.Element("Movies");
             school.Add(new XElement("Movie",
-                  new XElement("Id",  rnd.Next(0,int.MaxValue)  ),
+                  new XElement("Id", rnd.Next(0, int.MaxValue)),
                        new XElement("Title", movie.Title),
                          new XElement("Category", movie.Category),
                            new XElement("ImgUrl", movie.ImgUrl),
@@ -102,6 +107,18 @@ namespace eWave.TopMovies.eWave.TopMovies.DAL
             movieElemant.Remove();
             xDoc.Save("Movies.xml");
 
+        }
+
+        public static List<Movie> DeserializeMoviesXml()
+        {
+            XmlSerializer serializer = new XmlSerializer(typeof(Movies));
+            List<Movie> movies = new List<Movie>();
+            using (FileStream fileStream = new FileStream("Movies.xml", FileMode.Open))
+            {
+                Movies _moviesXml = (Movies)serializer.Deserialize(fileStream);
+                movies = _moviesXml.moviesItems;
+            }
+            return movies;
         }
     }
 
